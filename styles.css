@@ -1,0 +1,40 @@
+
+:root{
+  --bg:#ffffff;
+  --text:#2d2a32;
+  --muted:#6b647a;
+  --brand:#6b46c1;      /* purple */
+  --brand-2:#805ad5;    /* lighter purple */
+  --brand-3:#e9d8fd;    /* lilac bg */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:100}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav img{height:40px}
+.nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:500}
+.nav a:hover{color:var(--brand)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:56px 0}
+.tag{display:inline-block;background:var(--brand-3);color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;letter-spacing:.3px}
+h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
+.lead{color:var(--muted);font-size:18px;margin-bottom:22px}
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600;border:0}
+.btn-outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid #eee;border-radius:16px;padding:18px;background:#fff}
+.card h3{margin-top:0}
+.section{padding:56px 0}
+.section.alt{background:#faf8ff}
+.list{margin:0;padding-left:18px;color:var(--muted)}
+.kicker{color:var(--brand);font-weight:700;margin-bottom:8px}
+.footer{border-top:1px solid #eee;color:var(--muted);padding:28px 0;text-align:center}
+.form{display:grid;gap:12px}
+.input, textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:12px;font:inherit}
+.small{font-size:12px;color:var(--muted)}
+.hero-illustration{display:flex;justify-content:center}
+.hero-illustration img{max-width:240px;filter: drop-shadow(0 12px 24px rgba(107,70,193,.15));}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:20px}
+  .grid-3{grid-template-columns:1fr}
+}

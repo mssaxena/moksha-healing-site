@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moksham Healing</title>
+  <meta name="description" content="Meditation, yoga, and sound healing therapy in Dharamsala, HP, India." />
+
+  <!-- Minimal, responsive styles -->
+  <style>
+    :root{
+      --brand:#6b46c1;        /* purple */
+      --brand-dark:#5a34aa;
+      --text:#2d2a32;
+      --muted:#666;
+      --bg:#fff;
+      --panel:#ffffff;
+      --border:#ecebed;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{background:var(--brand);color:#fff}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:42px;width:auto}
+    nav a{color:#fff;text-decoration:none;font-weight:600;margin-left:16px}
+    nav a:hover{text-decoration:underline}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding:48px 0}
+    .tag{display:inline-block;background:#efe7ff;color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.25px}
+    h1{font-size:42px;line-height:1.15;margin:14px 0 8px}
+    .lead{color:var(--muted);font-size:18px;margin:0 0 18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn:hover{background:var(--brand-dark)}
+    .btn-outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
+    .hero-illustration img{max-width:260px;width:100%;filter: drop-shadow(0 10px 24px rgba(107,70,193,.18));}
+    .section{padding:48px 0}
+    .alt{background:#faf8ff}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px}
+    .kicker{color:var(--brand);font-weight:800;margin:0 0 8px}
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+    .form{display:grid;gap:12px}
+    .input, textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:12px;font:inherit}
+    .contact-icons{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
+    .icon{width:24px;height:24px;object-fit:contain;display:inline-block}
+    footer{border-top:1px solid var(--border);color:#7a7780;padding:24px 0;text-align:center}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+      nav a{margin-left:0}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <!-- FIXED PATH -->
+        <img src="./assets/moksham-logo.png" alt="Moksham Healing logo">
+        <strong style="font-weight:900;font-size:18px">Moksham Healing</strong>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="https://wa.me/918928837320" target="_blank" rel="noopener">Book a Session</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="container hero">
+      <div>
+        <span class="tag">Meditation • Yoga • Sound Healing</span>
+        <h1>Find stillness. Restore balance.<br>Feel whole again.</h1>
+        <p class="lead">
+          Personalized sessions and small-group classes blending breathwork, mindful movement, and sound therapy.
+          New to practice? You’re welcome.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="https://wa.me/918928837320" target="_blank" rel="noopener">Book a session</a>
+          <a class="btn btn-outline" href="#services">Explore services</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <img src="./assets/moksham-logo.png" alt="Moksham lotus">
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section alt">
+      <div class="container">
+        <p class="kicker">Services</p>
+        <h2 style="margin-top:0">What we offer</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Meditation</h3>
+            <p style="color:var(--muted)">Guided sessions for focus, relaxation, and sleep. Breath-led and beginner friendly.</p>
+            <ul class="list">
+              <li>1:1 or small group</li>
+              <li>Online or in-person</li>
+              <li>15–60 minutes</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Yoga</h3>
+            <p style="color:var(--muted)">Gentle Hatha and Vinyasa flows to build strength and mobility without strain.</p>
+            <ul class="list">
+              <li>Private or group</li>
+              <li>Mats & props provided</li>
+              <li>All levels</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Sound Healing</h3>
+            <p style="color:var(--muted)">Crystal bowls, chimes, and gong to calm the nervous system and reset.</p>
+            <ul class="list">
+              <li>Deep relaxation</li>
+              <li>60–90 minute baths</li>
+              <li>Breath + sound journey</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="kicker">About</p>
+        <h2 style="margin-top:0">Rooted in care</h2>
+        <p class="lead">
+          Based in Dharamsala, HP, India, Moksham Healing blends traditional practices with modern mindfulness.
+          Sessions are tailored to your body and your season of life—gentle, present, and practical.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact (form box + brand icons) -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <p class="kicker">Contact</p>
+        <h2 style="margin-top:0">Say hello</h2>
+
+        <form class="form card" method="POST" action="https://formspree.io/f/your-id">
+          <input class="input" type="text" name="name" placeholder="Your name" required>
+          <input class="input" type="email" name="email" placeholder="Email address" required>
+          <textarea class="input" name="message" rows="5" placeholder="Tell us what you’re looking for" required></textarea>
+          <button class="btn" type="submit">Send</button>
+          <span style="font-size:12px;color:var(--muted)">Prefer WhatsApp? Tap below and we’ll reply there.</span>
+
+          <!-- Social buttons with your actual brand assets -->
+          <div class="contact-icons">
+            <!-- Instagram (encode spaces in path) -->
+            <a href="https://www.instagram.com/yogabyshiva/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img
+                class="icon"
+                src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png"
+                alt="Instagram" />
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/918928837320" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <img
+                class="icon"
+                src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png"
+                alt="WhatsApp" />
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Moksham Healing • Dharamsala, HP, India
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
