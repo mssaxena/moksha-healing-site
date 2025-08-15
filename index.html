@@ -6,10 +6,9 @@
   <title>Moksham Healing</title>
   <meta name="description" content="Meditation, yoga, and sound healing therapy in Dharamsala, HP, India." />
 
-  <!-- Minimal, responsive styles -->
   <style>
     :root{
-      --brand:#6b46c1;        /* purple */
+      --brand:#6b46c1;
       --brand-dark:#5a34aa;
       --text:#2d2a32;
       --muted:#666;
@@ -18,51 +17,81 @@
       --border:#ecebed;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{background:var(--brand);color:#fff}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:42px;width:auto}
-    nav a{color:#fff;text-decoration:none;font-weight:600;margin-left:16px}
-    nav a:hover{text-decoration:underline}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding:48px 0}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--text); -webkit-text-size-adjust:100%}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+    /* HEADER */
+    header{background:var(--brand);color:#fff;position:sticky;top:0;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;min-width:0}
+    .brand img{height:36px;width:auto}
+    .brand strong{font-weight:900;font-size:18px;white-space:nowrap}
+    nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{color:#fff;text-decoration:none;font-weight:700;padding:8px 6px;border-radius:8px}
+    nav a:active, nav a:hover{background:rgba(255,255,255,.12)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:32px 0}
     .tag{display:inline-block;background:#efe7ff;color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.25px}
-    h1{font-size:42px;line-height:1.15;margin:14px 0 8px}
+    h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
     .lead{color:var(--muted);font-size:18px;margin:0 0 18px}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:800;min-height:44px}
     .btn:hover{background:var(--brand-dark)}
     .btn-outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
-    .hero-illustration img{max-width:260px;width:100%;filter: drop-shadow(0 10px 24px rgba(107,70,193,.18));}
-    .section{padding:48px 0}
+    .hero-illustration{display:flex;justify-content:center}
+    .hero-illustration img{max-width:220px;filter: drop-shadow(0 10px 24px rgba(107,70,193,.18));}
+
+    /* SECTIONS */
+    .section{padding:36px 0}
     .alt{background:#faf8ff}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px}
     .kicker{color:var(--brand);font-weight:800;margin:0 0 8px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px}
     .list{margin:0;padding-left:18px;color:var(--muted)}
+
+    /* CONTACT */
     .form{display:grid;gap:12px}
     .input, textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:12px;font:inherit}
     .contact-icons{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
     .icon{width:24px;height:24px;object-fit:contain;display:inline-block}
-    footer{border-top:1px solid var(--border);color:#7a7780;padding:24px 0;text-align:center}
 
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);color:#7a7780;padding:18px 0;text-align:center}
+
+    /* ====== RESPONSIVE TWEAKS ====== */
     @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
+      .container{padding:0 14px}        /* tighter side padding */
+      .hero{grid-template-columns:1fr;gap:18px;padding:24px 0}
+      h1{font-size:34px;margin:10px 0 8px}
+      .lead{font-size:16px;margin:0 0 14px}
+      nav{justify-content:flex-end}
+    }
+    @media (max-width:600px){
+      .container{padding:0 12px}        /* more side margin on very small screens */
+      .nav{flex-wrap:wrap}
+      .brand img{height:32px}
+      .brand strong{font-size:16px}
+      nav{width:100%;justify-content:flex-start;gap:10px}
+      .hero{padding:18px 0}
+      .tag{margin-bottom:8px}
+      h1{font-size:26px;line-height:1.22;margin:6px 0 8px}
+      .lead{font-size:15px;margin:0 0 12px}
+      .btn{width:100%;border-radius:10px;padding:12px 14px}
+      .btn + .btn{margin-top:8px}
       .grid-3{grid-template-columns:1fr}
-      nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-      nav a{margin-left:0}
+      .card{padding:14px;border-radius:12px}
+      .hero-illustration{display:none}   /* hide extra image to save space */
     }
   </style>
 </head>
 <body>
 
-  <!-- Top bar -->
   <header>
     <div class="container nav">
       <div class="brand">
-        <!-- FIXED PATH -->
         <img src="./assets/moksham-logo.png" alt="Moksham Healing logo">
-        <strong style="font-weight:900;font-size:18px">Moksham Healing</strong>
+        <strong>Moksham Healing</strong>
       </div>
       <nav aria-label="Primary">
         <a href="#services">Services</a>
@@ -74,7 +103,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="container hero">
       <div>
         <span class="tag">Meditation • Yoga • Sound Healing</span>
@@ -93,7 +121,6 @@
       </div>
     </section>
 
-    <!-- Services -->
     <section id="services" class="section alt">
       <div class="container">
         <p class="kicker">Services</p>
@@ -130,7 +157,6 @@
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <p class="kicker">About</p>
@@ -142,7 +168,6 @@
       </div>
     </section>
 
-    <!-- Contact (form box + brand icons) -->
     <section id="contact" class="section alt">
       <div class="container">
         <p class="kicker">Contact</p>
@@ -155,22 +180,13 @@
           <button class="btn" type="submit">Send</button>
           <span style="font-size:12px;color:var(--muted)">Prefer WhatsApp? Tap below and we’ll reply there.</span>
 
-          <!-- Social buttons with your actual brand assets -->
           <div class="contact-icons">
-            <!-- Instagram (encode spaces in path) -->
             <a href="https://www.instagram.com/yogabyshiva/" target="_blank" rel="noopener" aria-label="Instagram">
-              <img
-                class="icon"
-                src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png"
-                alt="Instagram" />
+              <img class="icon" src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png" alt="Instagram" />
             </a>
 
-            <!-- WhatsApp -->
             <a href="https://wa.me/918928837320" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <img
-                class="icon"
-                src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png"
-                alt="WhatsApp" />
+              <img class="icon" src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png" alt="WhatsApp" />
             </a>
           </div>
         </form>
