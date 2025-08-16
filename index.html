@@ -162,55 +162,40 @@
   </footer>
 
   <script>
-    // Year stamp (guarded in case #y isn't present)
-    (function(){ const y=document.getElementById('y'); if(y) y.textContent = new Date().getFullYear(); })();
+    const nameEl = document.getElementById('contactName');
+    const msgEl  = document.getElementById('contactMessage');
+    const waBtn  = document.getElementById('whatsappBtn');
+    const igBtn  = document.getElementById('instagramBtn');
 
-    // Elements
-    const waBtn = document.getElementById('whatsappBtn');
-    const igBtn = document.getElementById('instagramBtn');
-    const nameInput = document.getElementById('contactName');
-    const msgInput  = document.getElementById('contactMessage');
-
-    // Build shared starter message
-    function buildMessage() {
-      const name = (nameInput.value || '').trim();
-      const details = (msgInput.value || '').trim();
-
+    function buildMsg() {
+      const name = (nameEl?.value || '').trim();
+      const ask  = (msgEl?.value  || '').trim();
       let text = 'Hi';
-      if (name) text += `, I’m ${name}.`;
-      else text += ' there.';
-
+      text += name ? `, I’m ${name}.` : ' there.';
       text += ' I’d like to book a session with Moksham Healing';
-      if (details) text += ` — ${details}`;
+      if (ask) text += ` — ${ask}`;
       text += '. Could you share availability and pricing?';
-
       return text;
     }
 
-    // WhatsApp: supports prefill
-    function updateWhatsApp() {
-      const base = 'https://wa.me/918928837320';
-      waBtn.href = base + '?text=' + encodeURIComponent(buildMessage());
+    function updateWA() {
+      waBtn.href = 'https://wa.me/918928837320?text=' + encodeURIComponent(buildMsg());
     }
 
-    // Keep WA link fresh
-    nameInput.addEventListener('input', updateWhatsApp);
-    msgInput.addEventListener('input', updateWhatsApp);
-    waBtn.addEventListener('mouseenter', updateWhatsApp);
-    waBtn.addEventListener('touchstart', updateWhatsApp, {passive:true});
-    updateWhatsApp();
+    // Keep WA fresh as user types
+    nameEl?.addEventListener('input', updateWA);
+    msgEl?.addEventListener('input', updateWA);
+    waBtn?.addEventListener('mouseenter', updateWA);
+    waBtn?.addEventListener('touchstart', updateWA, {passive:true});
+    updateWA();
 
-    // Instagram: copy message then open DMs (best entry point)
-    async function handleInstagramClick(e){
+    // Instagram: copy message to clipboard, then open DM entry point
+    async function openIG(e){
       e.preventDefault();
-      const text = buildMessage();
-
-      try { await navigator.clipboard.writeText(text); } catch(_) { /* ignore clipboard failure */ }
-
-      // Opens Instagram DM entry (app on mobile; web on desktop)
+      try { await navigator.clipboard.writeText(buildMsg()); } catch(_) {}
       window.open('https://ig.me/m/yogabyshiva', '_blank');
     }
-    igBtn.addEventListener('click', handleInstagramClick);
+    igBtn?.addEventListener('click', openIG);
   </script>
 </body>
 </html>

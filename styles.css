@@ -86,11 +86,11 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
   font-weight:800;
   text-transform:uppercase;
   letter-spacing:.4px;
-  margin:0 0 8px;
+  margin:0 0 6px;       /* tighter spacing above the main heading */
   font-size:13px;
 }
 .section h2{
-  margin:0 0 18px;           /* keep the main section heading close to the kicker */
+  margin:0 0 18px;      /* keep the main section heading close to the kicker */
   font-size:32px;
   line-height:1.2;
 }
@@ -113,6 +113,12 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
 .contact-btn .icon{width:22px;height:22px;object-fit:contain}
 .insta-btn{background:#E1306C}
 .whatsapp-btn{background:#25D366}
+
+/* Make “Say hello” smaller than the Contact section title */
+#contact h2{
+  font-size:28px;
+  margin-bottom:14px;
+}
 
 /* Footer (icons centered above or beside copyright) */
 .footer{border-top:1px solid #eee;color:var(--muted)}
