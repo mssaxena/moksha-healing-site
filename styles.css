@@ -79,7 +79,10 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
 .hero-illustration img{max-width:240px;filter: drop-shadow(0 12px 24px rgba(107,70,193,.15));}
 
 /* Section chrome + headings polish */
-.section{padding:48px 0}
+.section{
+  padding:48px 0;
+  border-bottom:1px solid #f0f0f0;  /* subtle divider */
+}
 .section.alt{background:#faf8ff}
 .kicker{
   color:var(--brand);
@@ -93,13 +96,21 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
   margin:0 0 18px;      /* keep the main section heading close to the kicker */
   font-size:32px;
   line-height:1.2;
+  font-weight:800;          /* make headings stand out */
+  text-align:center;        /* center align for balance */
 }
 .muted{color:var(--muted)}
 
 /* Services grid/cards */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{border:1px solid #eee;border-radius:16px;padding:18px;background:#fff}
-.card h3{margin-top:0}
+.card h3{
+  margin-top:0;
+  font-size:20px;
+  font-weight:700;
+  text-align:center;
+  color:var(--brand);
+}
 
 /* Contact form + buttons */
 .form{display:grid;gap:12px;max-width:520px}
@@ -116,8 +127,10 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
 
 /* Make “Say hello” smaller than the Contact section title */
 #contact h2{
-  font-size:28px;
-  margin-bottom:14px;
+  font-size:26px;
+  margin-bottom:16px;
+  text-align:left;         /* keep aligned with form */
+  font-weight:700;
 }
 
 /* Footer (icons centered above or beside copyright) */
@@ -168,3 +181,12 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
   .hero-illustration{display:none}
   .contact-buttons{max-width:100%}
 }
+
+/* make in-page anchors land below sticky header */
+.section { scroll-margin-top: 90px; }
+
+/* crisper hover/focus states */
+.nav-links a:focus-visible,
+.nav-links a:hover { background: rgba(255,255,255,.18); outline: none; }
+
+.contact-btn:active { transform: translateY(1px); }
