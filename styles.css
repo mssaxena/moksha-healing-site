@@ -200,3 +200,34 @@ a:focus-visible, .btn:focus-visible, .contact-btn:focus-visible{
   outline:2px solid #fff;
   outline-offset:2px;
 }
+
+@media (max-width: 820px){
+  .nav-links { gap: 14px; }
+  .nav-links a { padding: 8px 10px; }
+}
+
+@media (max-width: 380px){
+  h1 { font-size: 24px; line-height: 1.18; }
+}
+
+.grid-3 { align-items: stretch; }
+.card { display: flex; flex-direction: column; }
+.card .list { margin-top: auto; }  /* pushes list down for equal-ish heights */
+
+#contact .kicker { margin-bottom: 6px; }
+#contact .form   { margin-top: 10px; }          /* gives a beat after the header */
+#contact .contact-buttons { margin-top: 6px; }  /* small visual pause before buttons */
+
+.btn:active,
+.contact-btn:active { transform: translateY(1px); }
+
+html { scroll-behavior: smooth; }
+
+@media (min-width: 900px){
+  .footer .social-icons .icon { width: 32px; height: 32px; }
+}
+
+a:focus-visible, .btn:focus-visible, .contact-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
