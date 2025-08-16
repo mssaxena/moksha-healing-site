@@ -115,35 +115,50 @@
     </section>
 
     <!-- Contact -->
+    <!-- Contact -->
     <section id="contact" class="section alt">
       <div class="container">
         <p class="kicker">Contact</p>
         <h2 style="margin-top:0">Say hello</h2>
 
-        <!-- Mini form that feeds the WhatsApp/Instagram compose -->
-        <form class="form card" onsubmit="return false;">
-          <input class="input" id="contactName" type="text" name="name" placeholder="Your name (optional)" />
-          <textarea class="input" id="contactMessage" name="message" rows="4" placeholder="What would you like help with?"></textarea>
-
-          <div class="contact-buttons">
-            <!-- WhatsApp builds a message from fields -->
-            <a id="whatsappBtn" class="contact-btn whatsapp-btn" href="https://wa.me/918928837320" target="_blank" rel="noopener">
-              <img class="icon" src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png" alt="WhatsApp" />
-              Chat on WhatsApp
-            </a>
-
-            <!-- Instagram: copies message then opens DMs -->
-            <a id="instagramBtn" class="contact-btn insta-btn" href="https://www.instagram.com/yogabyshiva/" target="_blank" rel="noopener">
-              <img class="icon" src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png" alt="Instagram" />
-              Message on Instagram
-            </a>
+        <!-- Two-column layout: logo + form -->
+        <div class="contact-grid">
+          <div class="contact-visual">
+            <!-- Use transparent (purple) logo so it reads on light background -->
+            <img
+              src="./assets/logo/moksham-logo-transparent.png"
+              alt="Moksham Healing lotus"
+              loading="lazy"
+            />
           </div>
 
-          <span class="small">Tip: share your preferred time and whether you want meditation, yoga, or sound healing.</span>
-        </form>
+          <div class="contact-pane">
+            <!-- Mini form that feeds the WhatsApp/Instagram compose -->
+            <form class="form card" onsubmit="return false;">
+              <input class="input" id="contactName" type="text" name="name" placeholder="Your name (optional)" />
+              <textarea class="input" id="contactMessage" name="message" rows="4" placeholder="What would you like help with?"></textarea>
 
+              <div class="contact-buttons">
+                <!-- WhatsApp builds a message from fields -->
+                <a id="whatsappBtn" class="contact-btn whatsapp-btn" href="https://wa.me/918928837320" target="_blank" rel="noopener">
+                  <img class="icon" src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png" alt="WhatsApp" />
+                  Chat on WhatsApp
+                </a>
+
+                <!-- Instagram: copies message then opens DMs -->
+                <a id="instagramBtn" class="contact-btn insta-btn" href="https://www.instagram.com/yogabyshiva/" target="_blank" rel="noopener">
+                  <img class="icon" src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png" alt="Instagram" />
+                  Message on Instagram
+                </a>
+              </div>
+
+              <span class="small">Tip: share your preferred time and whether you want meditation, yoga, or sound healing.</span>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">

@@ -235,3 +235,39 @@ a:focus-visible, .btn:focus-visible, .contact-btn:focus-visible {
 .btn {
   text-align: center;
 }
+
+/* Contact: two-column layout for logo + form */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1fr 1.4fr; /* logo smaller, form bigger */
+  gap: 32px;
+  align-items: center;
+}
+
+.contact-visual img{
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 10px 22px rgba(107,70,193,.18));
+}
+
+.contact-pane{ width: 100%; }
+
+/* Stack on smaller screens */
+@media (max-width: 900px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .contact-visual img{
+    max-width: 220px;
+  }
+  #contact h2{ text-align: center; } /* matches the stacked layout */
+}
+
+/* Tiny phones: a touch smaller so it never crowds */
+@media (max-width: 380px){
+  .contact-visual img{ max-width: 180px; }
+}
