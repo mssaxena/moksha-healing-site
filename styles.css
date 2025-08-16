@@ -18,34 +18,50 @@ html,body{
 img{max-width:100%;height:auto;display:block}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-/* Header / Nav (purple bar + big logo) */
+/* Header / Nav (purple bar + alignment fix) */
 header{
   position:sticky;top:0;z-index:100;
-  background:var(--brand); /* purple header */
-  border-bottom:0;color:#fff;
+  background:var(--brand);
+  color:#fff;
 }
 .nav{
   display:flex;align-items:center;justify-content:space-between;gap:16px;
-  min-height:72px;padding:10px 0;
+  min-height:76px;padding:10px 0;
 }
-.nav img{
-  height:72px;           /* bigger by default */
+.brand{
+  display:flex;align-items:center;gap:12px;min-width:0;
+}
+.brand img{
+  height:64px;           /* adjust if you want smaller/larger */
   width:auto;
+  display:block;
 }
-@media (min-width:900px){ .nav img{height:88px} }  /* large on desktop */
-@media (max-width:600px){ .nav img{height:50px} }  /* still sizable on phones */
-
-.nav a{
-  margin-left:18px;text-decoration:none;color:#fff;font-weight:700;
+.brand-label{
+  color:#fff;text-decoration:none;
+  font-weight:900;font-size:20px;line-height:1;
+  display:inline-block;
+}
+.nav-links{
+  display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:flex-end;
+}
+.nav-links a{
+  color:#fff;text-decoration:none;font-weight:700;
   padding:8px 6px;border-radius:8px;
 }
-.nav a:hover{background:rgba(255,255,255,.12)}
+.nav-links a:hover{background:rgba(255,255,255,.12)}
+@media (min-width:900px){ .brand img{height:80px} }
+@media (max-width:600px){
+  .brand img{height:50px}
+  .nav{flex-wrap:wrap}
+  .nav-links{width:100%;justify-content:flex-start;gap:14px}
+}
 
 /* Hero */
 .hero{
   display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;
   padding:48px 0;
 }
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
 .tag{
   display:inline-block;background:var(--brand-3);color:var(--brand);
   padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;letter-spacing:.3px
@@ -53,7 +69,8 @@ header{
 h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
 .lead{color:var(--muted);font-size:18px;margin-bottom:18px}
 .btn{
-  display:inline-block;background:var(--brand);color:#fff;padding:12px 18px;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--brand);color:#fff;padding:12px 18px;
   border-radius:12px;text-decoration:none;font-weight:700;border:0;min-height:44px
 }
 .btn:hover{background:#5a34aa}
@@ -61,22 +78,71 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
 .hero-illustration{display:flex;justify-content:center}
 .hero-illustration img{max-width:240px;filter: drop-shadow(0 12px 24px rgba(107,70,193,.15));}
 
-/* Sections */
+/* Section chrome + headings polish */
+.section{padding:48px 0}
+.section.alt{background:#faf8ff}
+.kicker{
+  color:var(--brand);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  margin:0 0 8px;
+  font-size:13px;
+}
+.section h2{
+  margin:0 0 18px;           /* keep the main section heading close to the kicker */
+  font-size:32px;
+  line-height:1.2;
+}
+.muted{color:var(--muted)}
+
+/* Services grid/cards */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{border:1px solid #eee;border-radius:16px;padding:18px;background:#fff}
 .card h3{margin-top:0}
-.section{padding:48px 0}
-.section.alt{background:#faf8ff}
-.list{margin:0;padding-left:18px;color:var(--muted)}
-.kicker{color:var(--brand);font-weight:700;margin-bottom:8px}
-.footer{border-top:1px solid #eee;color:var(--muted);padding:28px 0;text-align:center}
 
-/* Forms / Contact icons */
-.form{display:grid;gap:12px}
+/* Contact form + buttons */
+.form{display:grid;gap:12px;max-width:520px}
 .input, textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:12px;font:inherit}
 .small{font-size:12px;color:var(--muted)}
-.contact-icons{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
-.icon{width:24px;height:24px;object-fit:contain;display:inline-block}
+.contact-buttons{display:flex;flex-direction:column;gap:12px;max-width:520px}
+.contact-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none;color:#fff
+}
+.contact-btn .icon{width:22px;height:22px;object-fit:contain}
+.insta-btn{background:#E1306C}
+.whatsapp-btn{background:#25D366}
+
+/* Footer (icons centered above or beside copyright) */
+.footer{border-top:1px solid #eee;color:var(--muted)}
+.footer-bar{
+  display:flex;
+  flex-direction:column;           /* mobile: stack */
+  align-items:center;
+  gap:12px;
+  padding:20px 0;
+}
+.footer .social-icons{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  justify-content:center;
+}
+.footer .social-icons .icon{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  transition:transform .15s ease;
+}
+.footer .social-icons .icon:hover{ transform:scale(1.08); }
+.copyright{margin:0}
+@media (min-width:700px){
+  .footer-bar{
+    flex-direction:row;            /* desktop: one line */
+    justify-content:space-between; /* copyright left, icons right */
+  }
+}
 
 /* Responsive tweaks */
 @media (max-width:900px){
@@ -88,11 +154,11 @@ h1{font-size:42px;line-height:1.15;margin:14px 0 10px}
 }
 @media (max-width:600px){
   .container{padding:0 12px}
-  .nav{flex-wrap:wrap}                     /* wrap links under logo if needed */
   .hero{padding:22px 0}
   h1{font-size:26px;line-height:1.22;margin:8px 0}
   .lead{font-size:15px;margin-bottom:12px}
   .btn{display:block;width:100%;border-radius:10px;padding:12px 14px}
   .btn + .btn{margin-top:8px}
-  .hero-illustration{display:none}         /* hide big logo to save vertical space */
+  .hero-illustration{display:none}
+  .contact-buttons{max-width:100%}
 }
