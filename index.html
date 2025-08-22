@@ -3,25 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moksham Healing</title>
+  <title>Moksham Healing — Dharamsala</title>
   <meta name="description" content="Meditation, yoga, and sound healing therapy in Dharamsala, HP, India." />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
-<body>
+<body id="home">
 
   <!-- Header -->
   <header>
     <div class="container nav">
-      <!-- BRAND (logo + label) -->
       <div class="brand" aria-label="Moksham Healing">
-        <!-- White logo for purple header (NOT clickable) -->
-        <img src="./assets/logo/moksham-logo-white.png" alt="Moksham Healing logo" />
-        <!-- Only the label is clickable -->
-        <a href="index.html" class="brand-label">Moksham Healing</a>
+        <img src="assets/logo/moksham-logo-white.png" alt="Moksham Healing logo" />
+        <a href="#home" class="brand-label">Moksham Healing</a>
       </div>
-
-      <!-- LINKS -->
       <nav class="nav-links" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="https://wa.me/918928837320" target="_blank" rel="noopener">Book a Session</a>
@@ -32,11 +27,13 @@
   </header>
 
   <main>
+
     <!-- Hero -->
-    <section class="container hero">
-      <div>
+    <section class="section hero alt">
+      <div class="container skinny center">
+        <img class="hero-logo" src="assets/logo/moksham-logo-transparent.png" alt="Moksham lotus" loading="lazy" />
         <span class="tag">Meditation • Yoga • Sound Healing</span>
-        <h1>Find stillness. Restore balance.<br>Feel whole again.</h1>
+        <h1 class="hero-title">Find stillness. Restore balance. Feel whole again.</h1>
         <p class="lead">
           Personalized sessions and small-group classes blending breathwork, mindful movement, and sound therapy.
           New to practice? You’re welcome.
@@ -46,28 +43,21 @@
           <a class="btn btn-outline" href="#services">Explore services</a>
         </div>
       </div>
-      <div class="hero-illustration">
-        <!-- Transparent version works on white -->
-        <img src="./assets/logo/moksham-logo-transparent.png" alt="Moksham lotus" />
-      </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="section alt">
-      <div class="container">
+    <section id="services" class="section">
+      <div class="container skinny">
         <p class="kicker">Services</p>
-        <h2 style="margin-top:0">What we offer</h2>
+        <h2>What we offer</h2>
 
-        <!-- Highlight: Teacher Training from the poster -->
-        <div class="card" style="margin-bottom:18px">
-          <h3 style="margin:0 0 6px">Tibetan Sound Bowls — 5-Day Teacher Training</h3>
-          <p class="muted" style="margin:0">
-            Certification course covering technique, practice and facilitation.
-          </p>
+        <!-- Highlight -->
+        <div class="card soft">
+          <h3 class="card-title">Tibetan Sound Bowls — 5-Day Teacher Training</h3>
+          <p class="muted">Certification course covering technique, practice, and facilitation.</p>
         </div>
 
-        <div class="grid-3">
-          <!-- COURSES -->
+        <div class="stack">
           <div class="card">
             <h3>Courses</h3>
             <p class="muted">Short intensives and certification tracks.</p>
@@ -78,7 +68,6 @@
             </ul>
           </div>
 
-          <!-- THERAPIES -->
           <div class="card">
             <h3>Therapies</h3>
             <p class="muted">Personalized sessions for deep restoration.</p>
@@ -88,7 +77,6 @@
             </ul>
           </div>
 
-          <!-- ENERGY HEALING -->
           <div class="card">
             <h3>Energy Healing</h3>
             <p class="muted">Group and private immersive experiences.</p>
@@ -103,10 +91,10 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
+    <section id="about" class="section alt">
+      <div class="container skinny">
         <p class="kicker">About</p>
-        <h2 style="margin-top:0">Rooted in care</h2>
+        <h2>Rooted in care</h2>
         <p class="lead">
           Based in Dharamsala, HP, India, Moksham Healing blends traditional practices with modern mindfulness.
           Sessions are tailored to your body and your season of life—gentle, present, and practical.
@@ -115,56 +103,38 @@
     </section>
 
     <!-- Contact -->
-    <!-- Contact -->
-    <section id="contact" class="section alt">
-      <div class="container">
+    <section id="contact" class="section">
+      <div class="container skinny">
         <p class="kicker">Contact</p>
-        <h2 style="margin-top:0">Say hello</h2>
+        <h2>Say hello</h2>
 
-        <!-- Two-column layout: logo + form -->
-        <div class="contact-grid">
-          <div class="contact-visual">
-            <!-- Use transparent (purple) logo so it reads on light background -->
-            <img
-              src="./assets/logo/moksham-logo-transparent.png"
-              alt="Moksham Healing lotus"
-              loading="lazy"
-            />
+        <form class="form card" onsubmit="return false;">
+          <input class="input" id="contactName" type="text" name="name" placeholder="Your name (optional)" autocomplete="name" inputmode="text" />
+          <textarea class="input" id="contactMessage" name="message" rows="4" placeholder="What would you like help with?" autocomplete="on"></textarea>
+
+          <div class="contact-buttons">
+            <a id="whatsappBtn" class="contact-btn whatsapp-btn" href="https://wa.me/918928837320" target="_blank" rel="noopener">
+              <img class="icon" src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png" alt="WhatsApp" />
+              Chat on WhatsApp
+            </a>
+
+            <a id="instagramBtn" class="contact-btn insta-btn" href="https://www.instagram.com/yogabyshiva/" target="_blank" rel="noopener">
+              <img class="icon" src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png" alt="Instagram" />
+              Message on Instagram
+            </a>
           </div>
 
-          <div class="contact-pane">
-            <!-- Mini form that feeds the WhatsApp/Instagram compose -->
-            <form class="form card" onsubmit="return false;">
-              <input class="input" id="contactName" type="text" name="name" placeholder="Your name (optional)" />
-              <textarea class="input" id="contactMessage" name="message" rows="4" placeholder="What would you like help with?"></textarea>
-
-              <div class="contact-buttons">
-                <!-- WhatsApp builds a message from fields -->
-                <a id="whatsappBtn" class="contact-btn whatsapp-btn" href="https://wa.me/918928837320" target="_blank" rel="noopener">
-                  <img class="icon" src="assets/whatsapp/01_Glyph/01_Digital/03_PNG/Green/Digital_Glyph_Green.png" alt="WhatsApp" />
-                  Chat on WhatsApp
-                </a>
-
-                <!-- Instagram: copies message then opens DMs -->
-                <a id="instagramBtn" class="contact-btn insta-btn" href="https://www.instagram.com/yogabyshiva/" target="_blank" rel="noopener">
-                  <img class="icon" src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png" alt="Instagram" />
-                  Message on Instagram
-                </a>
-              </div>
-
-              <span class="small">Tip: share your preferred time and whether you want meditation, yoga, or sound healing.</span>
-            </form>
-          </div>
-        </div>
+          <span class="small">Tip: share your preferred time and whether you want meditation, yoga, or sound healing.</span>
+        </form>
       </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-bar">
-      <p class="copyright">© 2025 Moksham Healing. All rights reserved.</p>
-  
+    <div class="container footer-center">
+      <p class="copyright">© <span id="y"></span> Moksham Healing. All rights reserved.</p>
       <div class="social-icons">
         <a href="https://www.instagram.com/yogabyshiva/" target="_blank" aria-label="Instagram">
           <img class="icon" src="assets/ig/01%20Static%20Glyph/01%20Gradient%20Glyph/Instagram_Glyph_Gradient.png" alt="Instagram" />
@@ -177,40 +147,42 @@
   </footer>
 
   <script>
-    const nameEl = document.getElementById('contactName');
-    const msgEl  = document.getElementById('contactMessage');
-    const waBtn  = document.getElementById('whatsappBtn');
-    const igBtn  = document.getElementById('instagramBtn');
+    // Year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-    function buildMsg() {
-      const name = (nameEl?.value || '').trim();
-      const ask  = (msgEl?.value  || '').trim();
+    // Compose message from mini form
+    const waBtn = document.getElementById('whatsappBtn');
+    const igBtn = document.getElementById('instagramBtn');
+    const nameInput = document.getElementById('contactName');
+    const msgInput  = document.getElementById('contactMessage');
+
+    function buildMessage() {
+      const name = (nameInput.value || '').trim();
+      const details = (msgInput.value || '').trim();
       let text = 'Hi';
       text += name ? `, I’m ${name}.` : ' there.';
       text += ' I’d like to book a session with Moksham Healing';
-      if (ask) text += ` — ${ask}`;
+      if (details) text += ` — ${details}`;
       text += '. Could you share availability and pricing?';
       return text;
     }
 
-    function updateWA() {
-      waBtn.href = 'https://wa.me/918928837320?text=' + encodeURIComponent(buildMsg());
+    function updateWhatsApp() {
+      waBtn.href = 'https://wa.me/918928837320?text=' + encodeURIComponent(buildMessage());
     }
-
-    // Keep WA fresh as user types
-    nameEl?.addEventListener('input', updateWA);
-    msgEl?.addEventListener('input', updateWA);
-    waBtn?.addEventListener('mouseenter', updateWA);
-    waBtn?.addEventListener('touchstart', updateWA, {passive:true});
-    updateWA();
+    nameInput.addEventListener('input', updateWhatsApp);
+    msgInput.addEventListener('input', updateWhatsApp);
+    waBtn.addEventListener('mouseenter', updateWhatsApp);
+    waBtn.addEventListener('touchstart', updateWhatsApp, {passive:true});
+    updateWhatsApp();
 
     // Instagram: copy message to clipboard, then open DM entry point
     async function openIG(e){
       e.preventDefault();
-      try { await navigator.clipboard.writeText(buildMsg()); } catch(_) {}
+      try { await navigator.clipboard.writeText(buildMessage()); } catch(_) {}
       window.open('https://ig.me/m/yogabyshiva', '_blank');
     }
-    igBtn?.addEventListener('click', openIG);
+    igBtn.addEventListener('click', openIG);
   </script>
 </body>
 </html>
